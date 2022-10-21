@@ -9,7 +9,7 @@ import { Link } from '@inertiajs/inertia-vue3';
             <h1>E-pood</h1>
             <div class="">
                 <Link href="#">Tooted</Link>
-                <Link href="#">Tooted</Link>
+                <Link href="#">Teised Tooted</Link>
                 <Link href="#">Tooted</Link>
             </div>
         </div>
