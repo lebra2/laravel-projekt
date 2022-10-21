@@ -1,6 +1,18 @@
-<template>
-    <div class="flex flex-col min-h-screen">
-        <nav class="h-20 w-full bg-gray-100" >test</nav>
+<script setup>
+import { Link } from '@inertiajs/inertia-vue3';
+</script>
 
-    </div>
+
+<template>
+    <nav class="w-full h-20 bg-gray-100">
+        <div class="max-w-screen h-full items-center flex flex-1 gap" >
+            <h1>E-pood</h1>
+            <div class="">
+                <Link href="#">Tooted</Link>
+                <Link href="#">Tooted</Link>
+                <Link href="#">Tooted</Link>
+            </div>
+        </div>
+
+    </nav>
 </template>

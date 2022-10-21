@@ -8,7 +8,15 @@ import PageFooter from '@/Components/PageFooter.vue';
 </script>
 
 <template>
-    <PageHeader></PageHeader>
-    <Content></Content>
-    <PageFooter></PageFooter>
+    <Head>
+        <title>E-pood</title>
+    </Head>
+    <div class="flex flex-col min-h-screen">
+        <PageHeader />
+        <Content />
+        <PageFooter />
+    </div>
+
+
+
 </template>
