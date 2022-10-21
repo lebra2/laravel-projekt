@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <main class="flex-1">
+    <div class="flex flex-1">
+        <main class="">
             <slot />
         </main>
     </div>
