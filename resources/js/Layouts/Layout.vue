@@ -15,4 +15,7 @@ import Content from '../Components/Content.vue';
         <Content />
         <PageFooter />
     </div>
+
+
+
 </template>

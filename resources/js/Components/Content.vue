@@ -3,5 +3,5 @@
         <main class="">
             <slot />
         </main>
-    </div>    
+    </div>
 </template>
