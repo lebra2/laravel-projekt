@@ -1,3 +1,6 @@
 <template>
-    <h1>asfasdfadsf</h1>
+    <div class="flex flex-col min-h-screen">
+        <nav class="h-20 w-full bg-gray-100" >test</nav>
+
+    </div>
 </template>
