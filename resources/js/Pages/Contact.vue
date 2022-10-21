@@ -12,13 +12,12 @@ import { Head } from '@inertiajs/inertia-vue3';
         <section class="mb-32 text-gray-800">
         <div class="flex justify-center">
             <div class="text-center lg:max-w-3xl md:max-w-xl">
-            <h2 class="text-4xl font-bold mb-24 px-6">Contact us!</h2>
+            <h2 class="text-4xl font-bold mb-24 px-6 underline decoration-4">Contact us!</h2>
             </div>
         </div>
 
-        <div class="flex flex-wrap">
-
-            <div class="grow-0 shrink-0 basis-auto mb-12 lg:mb-0 w-full lg:w-5/12 px-3 lg:px-6">
+        <div class="flex flex-wrap p-16 bg-neutral-100 shadow-2xl border-2 border-gray-200">
+            <div class="grow-0 shrink-0 basis-auto mb-12 lg:mb-0 w-full lg:w-5/12 px-3 lg:px-6 ">
             <form>
                 <div class="form-group mb-6">
                 <input type="text" class="form-control block
@@ -34,7 +33,7 @@ import { Head } from '@inertiajs/inertia-vue3';
                 transition
                 ease-in-out
                 m-0
-                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput7"
+                focus:text-gray-700 focus:bg-white focus:border-gray-700 focus:outline-none" id="exampleInput7"
                     placeholder="Name">
                 </div>
                 <div class="form-group mb-6">
@@ -51,7 +50,7 @@ import { Head } from '@inertiajs/inertia-vue3';
                 transition
                 ease-in-out
                 m-0
-                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleInput8"
+                focus:text-gray-700 focus:bg-white focus:border-gray-700 focus:outline-none" id="exampleInput8"
                     placeholder="Email address">
                 </div>
                 <div class="form-group mb-6">
@@ -70,21 +69,23 @@ import { Head } from '@inertiajs/inertia-vue3';
                 transition
                 ease-in-out
                 m-0
-                focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+                focus:text-gray-700 focus:bg-white focus:border-gray-700 focus:outline-none
                 " id="exampleFormControlTextarea13" rows="3" placeholder="Message"></textarea>
                 </div>
+
                 <div class="form-group form-check text-center mb-6">
                 <input type="checkbox"
-                    class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer"
+                    class="form-check-input appearance-none h-4 w-4 border border-gray-300 rounded-sm bg-white checked:bg-gray-700 checked:border-gray-700 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain mr-2 cursor-pointer"
                     id="exampleCheck87" checked>
                 <label class="form-check-label inline-block text-gray-800" for="exampleCheck87">Send me a copy of this
                     message</label>
                 </div>
+
                 <button type="submit" class="
                 w-full
                 px-6
                 py-2.5
-                bg-
+                bg-gray-700
                 text-white
                 font-medium
                 text-xs
@@ -98,6 +99,7 @@ import { Head } from '@inertiajs/inertia-vue3';
                 transition
                 duration-150
                 ease-in-out">Send</button>
+
             </form>
             </div>
 
@@ -173,9 +175,10 @@ import { Head } from '@inertiajs/inertia-vue3';
                     </div>
                     </div>
                     <div class="grow ml-6">
-                    <p class="font-bold mb-1">test</p>
-                    <p class="text-gray-500">bugs@example.com</p>
-                    <p class="text-gray-500">+1 234-567-89</p>
+                    <p class="font-bold mb-1">Gmail contacts</p>
+                    <p class="text-gray-500 underline cursor-default">toomsaluraiko@gmail.com</p>
+                    <p class="text-gray-500 underline cursor-default">lebrabusiness@gmail.com</p>
+                    <p class="text-gray-500 underline cursor-default">aitfredy@gmail.com</p>
                     </div>
                 </div>
                 </div>
