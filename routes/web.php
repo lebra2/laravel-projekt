@@ -4,6 +4,7 @@ use App\Http\Controllers\ProductController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,7 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Pood');
+    return Inertia::render('Pood', ['products' => Product::paginate(12)]);
 });
 
 Route::get('/products', [ProductController::class, 'index']);
