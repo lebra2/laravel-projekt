@@ -22,3 +22,5 @@ require __DIR__.'/auth.php';
 Route::get('/contact', function(){
     return Inertia::render('Contact');
 });
+
+Route::get('/Cart', [CartController::class, 'index']);
