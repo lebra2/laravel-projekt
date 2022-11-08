@@ -4,20 +4,10 @@ use App\Http\Controllers\ProductController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Models\Product;
 
 Route::get('/', function () {
-    return Inertia::render('Pood');
+    return Inertia::render('Pood', ['products' => Product::paginate(12)]);
 });
 
 Route::get('/products', [ProductController::class, 'index']);
@@ -32,3 +22,5 @@ require __DIR__.'/auth.php';
 Route::get('/contact', function(){
     return Inertia::render('Contact');
 });
+
+Route::get('/Cart', [CartController::class, 'index']);

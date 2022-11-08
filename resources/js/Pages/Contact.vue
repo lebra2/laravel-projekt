@@ -1,9 +1,10 @@
 <script setup>
 import Layout from '@/Layouts/Layout.vue';
-import { Head } from '@inertiajs/inertia-vue3';
+
 </script>
 
 <template>
+
     <Layout>
         <!-- Container for demo purpose -->
         <div class="container my-24 px-6 mx-auto">
@@ -12,7 +13,7 @@ import { Head } from '@inertiajs/inertia-vue3';
         <section class="mb-32 text-gray-800">
         <div class="flex justify-center">
             <div class="text-center lg:max-w-3xl md:max-w-xl">
-            <h2 class="text-4xl font-bold mb-24 px-6 underline decoration-4">Contact us!</h2>
+                <h2 class="text-4xl font-bold mb-24 px-6 underline decoration-4">Contact us!</h2>
             </div>
         </div>
 
