@@ -24,4 +24,6 @@ Route::get('/contact', function(){
     return Inertia::render('Contact');
 });
 
+Route::post('/cart-add', [CartController::class, 'store'])->name('card.add');
+
 Route::get('/cart', [CartController::class, 'index']);

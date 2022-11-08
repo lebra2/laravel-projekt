@@ -14,7 +14,11 @@ class CartController extends Controller
      */
     public function index()
     {
-        return Inertia::render('Cart');
+        dd(session()->all());
+        return Inertia::render('Cart',[
+            'cart' => session()->get('cart')
+        ]);
+        
     }
 
     /**
@@ -35,7 +39,14 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $id = $request->product['id'];
+        $request->session()->put('cart.product' . $id, [...$request->product, 'qty' => $request->qty]);
+        if(session()->has('cart.product' . $id)){
+                $sProduct = session()->get('cart.product' . $id);
+                $sProduct['qty'] += $request->qty;
+                session()->put('cart.product' . $id, $sProduct);
+        }
+        return redirect()->back();
     }
 
     /**
