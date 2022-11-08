@@ -24,7 +24,6 @@ console.log(props.products);
                 :product="product"
                 />
             </div>
-    
         </section>
     </Layout>
 </template>
