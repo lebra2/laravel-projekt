@@ -31,7 +31,7 @@ const submit = () => {
             <div class="pt-3 flex items-center justify-between">
                 <p class="">{{ product.name }}</p>
             </div>
-            <p class="pt-1 text-gray-900">${{ product.price }}</p>
+            <p class="pt-1 text-gray-900">{{ product.price.formatted }}</p>
         </a>
             <form @submit.prevent="submit">
                 <div>
