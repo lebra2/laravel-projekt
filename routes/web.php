@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -23,4 +24,6 @@ Route::get('/contact', function(){
     return Inertia::render('Contact');
 });
 
-Route::get('/Cart', [CartController::class, 'index']);
+Route::post('/cart-add', [CartController::class, 'store'])->name('card.add');
+
+Route::get('/cart', [CartController::class, 'index']);

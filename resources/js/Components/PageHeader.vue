@@ -42,6 +42,9 @@ import { Link } from '@inertiajs/inertia-vue3';
                     <li>
                         <a href="#" class="text-gray-900 dark:text-white hover:underline">Features</a>
                     </li>
+                    <li>
+                        <Link class="text-gray-900 dark:text-white hover:underline" href="">Ostukorv</Link>
+                    </li>
                 </ul>
             </div>
         </div>
