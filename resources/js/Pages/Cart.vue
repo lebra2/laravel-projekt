@@ -24,7 +24,7 @@ console.log(props.cart)
                 <div class="flex gap-2">
                     <p>Quantity:</p><input v-model="product.qty" class="rounded w-12 text-center">
                 </div>
-                <p>${{ product.price }}</p>
+                <p>{{ product.total.formatted }}</p>
             </div>
         </div>
     </div>
