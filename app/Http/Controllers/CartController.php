@@ -103,6 +103,9 @@ class CartController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if(session()->has('cart.product' . $id)){
+            $product = session()->forget('cart.product' . $id);
+        }
+        return redirect()->back();
     }
 }
