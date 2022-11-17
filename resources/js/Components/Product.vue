@@ -1,10 +1,27 @@
 <script setup>
+import { Link } from '@inertiajs/inertia-vue3';
+import { useForm } from '@inertiajs/inertia-vue3'
+
 const props = defineProps({
     product:{
         type: Object, 
         default: null
     }
 })
+
+const form = useForm({
+    product: props.product,
+    qty: 1,
+
+})
+
+const submit = () => {
+    form.post(route('card.add'), {
+        preserveScroll: true,
+        preserveState: false,
+    })
+}
+
 </script>
 
 <template>
@@ -16,5 +33,19 @@ const props = defineProps({
             </div>
             <p class="pt-1 text-gray-900">${{ product.price }}</p>
         </a>
+            <form @submit.prevent="submit">
+                <div>
+                    <input 
+                    id=""
+                    v-model="form.qty"
+                    >
+                </div>
+
+                <div>
+                    <button class="bg-green-300 rounded p-2">
+                        Add to Cart
+                    </button>
+                </div>
+            </form>
     </div>
 </template>
