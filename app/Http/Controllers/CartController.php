@@ -14,7 +14,7 @@ class CartController extends Controller
      */
     public function index()
     {
-        dd(session()->all());
+        // dd(session()->all());
         return Inertia::render('Cart',[
             'cart' => session()->get('cart')
         ]);
