@@ -26,4 +26,6 @@ Route::get('/contact', function(){
 
 Route::post('/cart-add', [CartController::class, 'store'])->name('card.add');
 
+Route::post('/cart-update/{id}', [CartController::class, 'update'])->name('cart.update');
+
 Route::get('/cart', [CartController::class, 'index']);

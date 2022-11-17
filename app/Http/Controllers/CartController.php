@@ -71,7 +71,7 @@ class CartController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
@@ -83,7 +83,16 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $qty = $request['qty'];
+        if(session()->has('cart.product' . $id)){
+            $sProduct = session()->get('cart.product' . $id);
+            $sProduct['total'] = Money::EUR($sProduct['price']['amount'] * $qty);
+            $sProduct['qty'] = $qty;
+            session()->put('cart.product' . $id, $sProduct);
+        }
+        return redirect()->back();
+        // dd($qty, $id, $sProduct);
+        
     }
 
     /**
