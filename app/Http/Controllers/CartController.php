@@ -49,6 +49,7 @@ class CartController extends Controller
         } else {     
             $request->session()->put('cart.product' . $id, [...$request->product, 'qty' => $request->qty, 'total' => Money::EUR($request->product['price']['amount'] * $request->qty)]);
         }
+        
         return redirect()->back();
     }
 
