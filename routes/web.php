@@ -26,4 +26,8 @@ Route::get('/contact', function(){
 
 Route::post('/cart-add', [CartController::class, 'store'])->name('card.add');
 
+Route::post('/cart-update/{id}', [CartController::class, 'update'])->name('cart.update');
+
+Route::delete('/cart-delete/{id}', [CartController::class, 'destroy'])->name('cart.delete');
+
 Route::get('/cart', [CartController::class, 'index']);
