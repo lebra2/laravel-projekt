@@ -1,5 +1,7 @@
 <script setup>
 import Layout from '@/Layouts/Layout.vue';
+import CartCard from '@/Components/CartCard.vue'
+import { ref } from 'vue';
 
 const props = defineProps({
     cart:{
@@ -9,22 +11,14 @@ const props = defineProps({
 })
 
 console.log(props.cart)
+const qty = ref()
 </script>
 
 
 <template>
 <Layout>
-    <div class="w-full flex justify-center items-center">
-        <div class="bg-gray-200 p-2 flex flex-col gap-6 w-2/3">
-            <div>
-                <p class="font-bold text-xl">{{ props.cart.name }}</p>
-                <p>{{ props.cart.description }}</p>
-            </div>
-            <div class="flex justify-between">
-                <p>Quantity: {{ props.cart.qty }}</p>
-                <p>${{ props.cart.price }}</p>
-            </div>
-        </div>
+    <div class="w-full flex flex-col gap-12 py-12 justify-center items-center">
+        <CartCard v-for="(product, index) in props.cart" :key="index" :product="product"  />
     </div>
 </Layout>
 </template>
