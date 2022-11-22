@@ -13,7 +13,7 @@
 <body>
 <div class="container">
     
-    <h2 class="text-center">Laravel 9 Stripe Payment Gateway Integration Example - LaravelTuts.com</h2>
+    <h2 class="text-center"></h2>
     
     <div class="row">
         <div class="col-md-7 col-md-offset-3">

@@ -35,5 +35,5 @@ Route::get('/cart', [CartController::class, 'index']);
 
 Route::controller(StripePaymentController::class)->group(function(){
     Route::get('stripe', 'stripe');
-    Route::post('stripe', 'stripePost')->name('stripe.post');
+    Route::post('stripe', 'pay')->name('stripe.post');
 });
