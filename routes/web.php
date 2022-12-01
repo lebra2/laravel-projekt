@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\StripePaymentController;
@@ -36,4 +37,11 @@ Route::get('/cart', [CartController::class, 'index']);
 Route::controller(StripePaymentController::class)->group(function(){
     Route::get('stripe', 'stripe');
     Route::post('stripe', 'pay')->name('stripe.post');
+
+
+
 });
+
+Route::resource('admin', AdminProductController::class)
+    ->only(['index', 'store'])
+    ->middleware(['auth', 'verified']);

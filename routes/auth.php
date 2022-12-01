@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminProductController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\ConfirmablePasswordController;
 use App\Http\Controllers\Auth\EmailVerificationNotificationController;
@@ -53,4 +54,25 @@ Route::middleware('auth')->group(function () {
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
+
+    Route::get('AdminProduct/create', [AdminProductController::class, 'create'])
+    ->name('AdminProduct.create');
+    
+    Route::post('AdminProduct', [AdminProductController::class, 'store'])
+        ->name('AdminProduct.store');
+    
+    Route::get('AdminProduct/{AdminProduct}/edit', [AdminProductController::class, 'edit'])
+        ->name('AdminProduct.edit');
+    
+    Route::put('AdminProduct/{AdminProduct}', [AdminProductController::class, 'update'])
+        ->name('AdminProduct.update');
+    
+    Route::delete('AdminProduct/{AdminProduct}', [AdminProductController::class, 'destroy'])
+        ->name('AdminProduct.destroy');
+    
+    Route::put('AdminProduct/{AdminProduct}/restore', [AdminProductController::class, 'restore'])
+        ->name('AdminProduct.restore');
+                       
 });
+
+

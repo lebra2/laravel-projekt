@@ -17,7 +17,7 @@ console.log(props.products);
     <Layout>
         <section class="bg-white py-8 ">
 
-            <div class=" mx-auto flex items-center flex-wrap max-w-screen p-12  ">
+            <div class=" mx-auto flex items-center flex-wrap max-w-screen p-12">
                 <Product 
                 v-for="product in products.data"
                 :key="product"
