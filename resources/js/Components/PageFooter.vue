@@ -9,7 +9,7 @@
             <div class="flex flex-col">
                 <h1 class="font-bold text-xl">Links</h1>
                 <a href="" class="underline">facebook.com</a>
-                <a href="" class="underline">instagram.com</a>
+                <a href="https://www.instagram.com/ofbrace/" class="underline">instagram.com</a>
                 <a href="" class="underline">github.com</a>
             </div>
     </footer>    
