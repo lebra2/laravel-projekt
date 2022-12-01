@@ -2,6 +2,7 @@
 import Layout from '@/Layouts/Layout.vue';
 import CartCard from '@/Components/CartCard.vue'
 import { ref } from 'vue';
+import Payment from '@/Components/Payment.vue'
 
 const props = defineProps({
     cart:{
@@ -19,6 +20,9 @@ const qty = ref()
 <Layout>
     <div class="w-full flex flex-col gap-12 py-12 justify-center items-center">
         <CartCard v-for="(product, index) in props.cart" :key="index" :product="product"  />
+    </div>
+    <div>
+        <Payment />
     </div>
 </Layout>
 </template>

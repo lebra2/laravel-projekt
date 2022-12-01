@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\StripePaymentController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -31,3 +32,8 @@ Route::post('/cart-update/{id}', [CartController::class, 'update'])->name('cart.
 Route::delete('/cart-delete/{id}', [CartController::class, 'destroy'])->name('cart.delete');
 
 Route::get('/cart', [CartController::class, 'index']);
+
+Route::controller(StripePaymentController::class)->group(function(){
+    Route::get('stripe', 'stripe');
+    Route::post('stripe', 'pay')->name('stripe.post');
+});

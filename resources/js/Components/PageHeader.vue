@@ -12,6 +12,7 @@ import { Link } from '@inertiajs/inertia-vue3';
             <div class="flex items-center gap-4">
                 <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">Login</a>
                 <a href="#" class="text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline">Register</a>
+                <Link class="text-white" href="/contact">Cart</Link>
             </div>
         </div>
     </nav>
@@ -31,7 +32,7 @@ import { Link } from '@inertiajs/inertia-vue3';
             <div class="flex items-center justify-center">
                 <ul class="flex flex-row mt-0 mr-6 space-x-8 text-sm font-medium">
                     <li>
-                        <a href="#" class="text-gray-900 dark:text-white hover:underline" aria-current="page">Bracelets</a>
+                        <Link class="text-white" href="/">Bracelets</Link>
                     </li>
                     <li>
                         <Link class="text-white" href="/contact">Contact</Link>
@@ -41,9 +42,6 @@ import { Link } from '@inertiajs/inertia-vue3';
                     </li>
                     <li>
                         <a href="#" class="text-gray-900 dark:text-white hover:underline">Features</a>
-                    </li>
-                    <li>
-                        <Link class="text-gray-900 dark:text-white hover:underline" href="">Ostukorv</Link>
                     </li>
                 </ul>
             </div>
